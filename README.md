@@ -143,7 +143,25 @@ TextCaptchaStrategy方法说明
 |getSelectedTextPaint(): Paint| 获取绘制选中文字的paint  
 |drawBackGround(canvas: Canvas, centerX: Float, centerY: Float)| 绘制正常文字背景，centerX,centerY是文字的中心点 
 |drawSelectedBackGround(canvas: Canvas, centerX: Float, centerY: Float)|  绘制选中文字背景，centerX,centerY是文字的中心点 
-|getEachWidthAndHeight(): Pair<Int, Int>|  获取每块文字的宽高 first 宽 second 高   
+|getEachWidthAndHeight(): Pair<Int, Int>|  获取每块文字的宽高 first 宽 second 高
+### 依赖方式
+在根项目的build.gradle增加以下配置
+```
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+在对应模块下的build.gradle中增加以下配置
+```
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    implementation 'com.github.Jiaoshichun:Captcha:1.0.0'
+    }
+```
 ## Other  
 + **文字绘制的起始位置是baseLine**  
   

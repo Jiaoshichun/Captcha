@@ -22,7 +22,7 @@ class SlidePuzzleCaptchaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_slide_puzzle_captcha)
         slideCaptchaView = findViewById(R.id.slide_captcha)
-        SlidePuzzleCaptchaHelper.create(slideCaptchaView).setPuzzleDrawable(R.drawable.demo1)
+        SlidePuzzleCaptchaHelper.create(slideCaptchaView)
             .setCaptchaStrategy(DefaultCaptchaStrategy(this))
             .matchedCallBack { matchedDegree, durcation ->  }
         captchaHelper = SlidePuzzleCaptchaHelper.create(slideCaptchaView)
