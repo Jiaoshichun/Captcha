@@ -1,7 +1,7 @@
 # 滑动拼图验证和点击文字验证  
 ## 效果图    
 滑动拼图验证  
-![滑动拼图验证](image/slide_captcha.gif)  
+![滑动拼图验证](image/slide_captcha.gif/w/240)  
 点击文本验证  
 ![点击文本验证](image/text_captcha.gif)
 
