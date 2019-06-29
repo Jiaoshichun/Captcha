@@ -159,7 +159,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 dependencies {
-    implementation 'com.github.Jiaoshichun:Captcha:1.0.0'
+        implementation 'com.github.Jiaoshichun:Captcha:1.0.0'
     }
 ```
 ## Other  
