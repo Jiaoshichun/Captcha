@@ -38,7 +38,7 @@ interface TextCaptchaStrategy {
      * 获取每块的宽高
      * @return first 宽 second 高
      */
-    fun getEachWidthAndHeight(): Pair<Int, Int>
+    fun getEachWidthAndHeight(): Pair<Float, Float>
 }
 
 open class DefaultTextCaptchaStrategy(val context: Context) : TextCaptchaStrategy {

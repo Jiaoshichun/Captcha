@@ -69,11 +69,10 @@ open class DefaultCaptchaStrategy(private val context: Context) : PuzzleCaptchaS
         shadowPaint.color = Color.WHITE
         shadowPaint.alpha = 200
         shadowPaint.strokeWidth = Utils.dp2px(context, 1f)
-            .toFloat()
         shadowPaint.setShadowLayer(
-            Utils.dp2px(context, 10f).toFloat(), Utils.dp2px(context, 2f).toFloat(), Utils.dp2px(
-                context, 2f
-            ).toFloat(),
+            Utils.dp2px(context, 10f),
+            Utils.dp2px(context, 2f),
+            Utils.dp2px(context, 2f),
             Color.WHITE
         )
     }
@@ -92,23 +91,29 @@ open class DefaultCaptchaStrategy(private val context: Context) : PuzzleCaptchaS
         val path1 = Path()
         path1.addRect(
             RectF(
-                Utils.dp2px(context, 0f).toFloat(), Utils.dp2px(context, 0f).toFloat(),
-                Utils.dp2px(context, 60f).toFloat(), Utils.dp2px(context, 60f).toFloat()
+                Utils.dp2px(context, 0f),
+                Utils.dp2px(context, 0f),
+                Utils.dp2px(context, 50f),
+                Utils.dp2px(context, 50f)
             ),
             CW
         )
         blockPath.op(path1, REVERSE_DIFFERENCE)
         blockPath.addArc(
             RectF(
-                Utils.dp2px(context, 50f).toFloat(), Utils.dp2px(context, 15f).toFloat(),
-                Utils.dp2px(context, 70f).toFloat(), Utils.dp2px(context, 35f).toFloat()
+                Utils.dp2px(context, 40f),
+                Utils.dp2px(context, 15f),
+                Utils.dp2px(context, 60f),
+                Utils.dp2px(context, 35f)
             ), -270f, 180f
         )
         val path2 = Path()
         path2.addArc(
             RectF(
-                Utils.dp2px(context, 15f).toFloat(), Utils.dp2px(context, 50f).toFloat(),
-                Utils.dp2px(context, 35f).toFloat(), Utils.dp2px(context, 70f).toFloat()
+                Utils.dp2px(context, 15f),
+                Utils.dp2px(context, 40f),
+                Utils.dp2px(context, 35f),
+                Utils.dp2px(context, 60f)
             ), -360f, 180f
         )
         blockPath.op(path2, Path.Op.XOR)

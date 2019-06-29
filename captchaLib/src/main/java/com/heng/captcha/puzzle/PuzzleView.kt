@@ -123,14 +123,6 @@ class PuzzleView @JvmOverloads constructor(
   }
 
   /**
-   * 成功调用
-   */
-  fun onSuccess() {
-    isGameOver = true
-    postInvalidate()
-  }
-
-  /**
    * 设置验证码样式策略
    */
   fun setCaptchaStrategy(captchaStrategy: PuzzleCaptchaStrategy) {

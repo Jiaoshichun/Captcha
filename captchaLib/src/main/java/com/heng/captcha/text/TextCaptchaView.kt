@@ -37,7 +37,7 @@ class TextCaptchaView @JvmOverloads constructor(
     private var textPaint = captchaStrategy.getTextPaint()
 
     //每一个文字的宽高
-    private var everyWH: Pair<Int, Int>? = null
+    private var everyWH: Pair<Float, Float>? = null
     //验证回调
     var verifyCallBack: ((isSuccess: Boolean) -> Unit)? = null
 
@@ -64,15 +64,15 @@ class TextCaptchaView @JvmOverloads constructor(
 
         allCharList.forEachIndexed { index, info ->
             //中心坐标X
-            val centerX = paddingLeft + (index * perWidth) + perWidth.toFloat() / 2 + everyWH!!.first.toFloat() / 2
+            val centerX = paddingLeft + (index * perWidth) + perWidth / 2 + everyWH!!.first / 2
             //中心坐标Y
             val centerY = paddingTop + scopeHeight * info.randomValue + everyWH!!.second / 2
 
             //设置 文字的范围
-            info.rectF.left = centerX - everyWH!!.first.toFloat() / 2
-            info.rectF.right = centerX + everyWH!!.first.toFloat() / 2
-            info.rectF.top = centerY - everyWH!!.second.toFloat() / 2
-            info.rectF.bottom = centerY + everyWH!!.second.toFloat() / 2
+            info.rectF.left = centerX - everyWH!!.first / 2
+            info.rectF.right = centerX + everyWH!!.first / 2
+            info.rectF.top = centerY - everyWH!!.second / 2
+            info.rectF.bottom = centerY + everyWH!!.second / 2
 
             if (info.isSelected) {
                 captchaStrategy.drawSelectedBackGround(canvas, centerX, centerY)

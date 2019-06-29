@@ -86,7 +86,7 @@ open class SlidePuzzleCaptchaView @JvmOverloads constructor(
 
                 //设置进度条的高度
                 styleable.SlidePuzzleCaptchaView_seekBarHeight -> {
-                    typedArray.getDimension(attr, Utils.dp2px(context, 40f).toFloat())
+                    typedArray.getDimension(attr, Utils.dp2px(context, 40f))
                         .let {
                             val params = sbDrag.layoutParams
                             params.height = it.toInt()
@@ -177,7 +177,7 @@ open class SlidePuzzleCaptchaView @JvmOverloads constructor(
                 }
                 //设置拼图与背景的间距
                 styleable.SlidePuzzleCaptchaView_puzzlePadding -> {
-                    val padding = typedArray.getDimension(attr, Utils.dp2px(context, 5f).toFloat())
+                    val padding = typedArray.getDimension(attr, Utils.dp2px(context, 5f))
                         .toInt()
                     val params = puzzleView.layoutParams as MarginLayoutParams
                     params.topMargin = padding
@@ -187,28 +187,28 @@ open class SlidePuzzleCaptchaView @JvmOverloads constructor(
                     puzzleView.layoutParams = params
                 }
                 styleable.SlidePuzzleCaptchaView_puzzlePaddingLeft -> {
-                    val paddingLeft = typedArray.getDimension(attr, Utils.dp2px(context, 5f).toFloat())
+                    val paddingLeft = typedArray.getDimension(attr, Utils.dp2px(context, 5f))
                         .toInt()
                     val params = puzzleView.layoutParams as MarginLayoutParams
                     params.leftMargin = paddingLeft
                     puzzleView.layoutParams = params
                 }
                 styleable.SlidePuzzleCaptchaView_puzzlePaddingRight -> {
-                    val paddingRight = typedArray.getDimension(attr, Utils.dp2px(context, 5f).toFloat())
+                    val paddingRight = typedArray.getDimension(attr, Utils.dp2px(context, 5f))
                         .toInt()
                     val params = puzzleView.layoutParams as MarginLayoutParams
                     params.rightMargin = paddingRight
                     puzzleView.layoutParams = params
                 }
                 styleable.SlidePuzzleCaptchaView_puzzlePaddingTop -> {
-                    val paddingTop = typedArray.getDimension(attr, Utils.dp2px(context, 5f).toFloat())
+                    val paddingTop = typedArray.getDimension(attr, Utils.dp2px(context, 5f))
                         .toInt()
                     val params = puzzleView.layoutParams as MarginLayoutParams
                     params.topMargin = paddingTop
                     puzzleView.layoutParams = params
                 }
                 styleable.SlidePuzzleCaptchaView_puzzlePaddingBottom -> {
-                    val paddingBottom = typedArray.getDimension(attr, Utils.dp2px(context, 5f).toFloat())
+                    val paddingBottom = typedArray.getDimension(attr, Utils.dp2px(context, 5f))
                         .toInt()
                     val params = puzzleView.layoutParams as MarginLayoutParams
                     params.bottomMargin = paddingBottom
