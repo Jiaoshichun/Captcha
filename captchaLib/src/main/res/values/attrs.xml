@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SlidePuzzleCaptchaView">
+        <!--底部滑动按钮提示文字-->
+        <attr format="string|reference" name="dragTipText"/>
+        <!--底部滑动按钮提示文字颜色-->
+        <attr format="color|reference" name="dragTipTextColor"/>
+        <!--底部滑动按钮的进度样式-->
+        <attr format="reference" name="seekBarProgressDrawable"/>
+        <!--底部滑动按钮的滑动球样式-->
+        <attr format="reference" name="seekBarThumb"/>
+        <!--底部滑动按钮的高度-->
+        <attr format="dimension" name="seekBarHeight"/>
+        <!--seekBar最小高度-->
+        <attr format="dimension" name="seekBarMinHeight"/>
+        <!--seekBar上方距离-->
+        <attr format="dimension" name="seekBarMarginTop"/>
+        <!--seekBar左边距离-->
+        <attr format="dimension" name="seekBarMarginLeft"/>
+        <!--seekBar右边距离-->
+        <attr format="dimension" name="seekBarMarginRight"/>
+        <!--seekBar底部距离-->
+        <attr format="dimension" name="seekBarMarginBottom"/>
+        <!--seekBar上下左右的margin值-->
+        <attr format="dimension" name="seekBarMargin"/>
+        <!--seekBar按钮便宜-->
+        <attr format="dimension" name="seekBarThumbOffset"/>
+        <!--拼图背景-->
+        <attr format="reference" name="puzzleBackground"/>
+        <!--拼图的宽高比-->
+        <attr format="string" name="puzzleRatio"/>
+        <!--拼图与背景的间距-->
+        <attr format="dimension" name="puzzlePadding"/>
+        <attr format="dimension" name="puzzlePaddingLeft"/>
+        <attr format="dimension" name="puzzlePaddingRight"/>
+        <attr format="dimension" name="puzzlePaddingTop"/>
+        <attr format="dimension" name="puzzlePaddingBottom"/>
+
+        <!--验证码上面的覆盖层，可以自定义成功/失败/刷新按钮等展示样式-->
+        <attr format="reference" name="puzzleCoverLayout"/>
+    </declare-styleable>
+</resources>
